@@ -401,3 +401,213 @@ body.bg {
 .sec_2 .collection_bottom .con9 {
   background: url(../image/fw_09.jpg) no-repeat center top / cover;
 }
+
+/* --------------------------- */
+/* sec3 */
+.sec_3 .ceo_top {
+  display: flex;
+  justify-content: center;
+}
+
+.sec_3 .ceoSwiper {
+  width: 794px;
+  height: 479px;
+
+  overflow: hidden;
+}
+
+.sec_3 .slider_wrap {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.sec_3 .slide_inner {
+  width: 25%;
+  height: 100%;
+}
+
+.sec_3 .slide_inner img {
+  object-position: center top;
+}
+
+.sec_3 .ceo_bottom {
+  margin-top: 60px;
+
+  display: flex;
+  gap: 20px;
+}
+
+.sec_3 .headtext {
+  margin-bottom: 32px;
+}
+
+.sec_3 .text_box {
+  width: 50%;
+}
+
+/* --------------------- */
+/* sec4 */
+
+.sec_4 .container {
+  padding-bottom: 200px;
+}
+
+.sec_4 .headtext {
+  margin-bottom: 32px;
+}
+
+.sec_4 .shop_content {
+  display: flex;
+  gap: 20px;
+}
+
+.sec_4 .content {
+  width: 33.333%;
+  height: 512px;
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+.sec_4 .shop_detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.sec_4 .content:hover .shop_detail {
+  opacity: 1;
+}
+
+.sec_4 .content:hover {
+  transform: translateY(-20px);
+}
+
+.sec_4 .shop_inner {
+  color: #fff;
+  text-align: center;
+}
+
+.sec_4 .shop_inner p {
+  font-family: "EB Garamond", serif;
+}
+
+.sec_4 .shop_inner .headtext {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+.sec_4 .shop_inner .address {
+  font-size: 0.75rem;
+  font-weight: 100;
+  /* 기울기처리 */
+  font-style: italic;
+  letter-spacing: 1.5px;
+  width: 172px;
+}
+
+/* ------------------------ */
+/* footer */
+.footer {
+  border-top: 0.5px solid #dbdbdb;
+}
+
+.footer .container {
+  width: 1600px;
+  margin: 0 auto;
+
+  text-transform: uppercase;
+  padding-top: 36px;
+  padding-bottom: 16px;
+  letter-spacing: 1.5px;
+}
+
+.footer .footer_t {
+  display: flex;
+}
+
+.footer .footer_t .box {
+  width: 20%;
+  height: 300px;
+  padding: 16px;
+}
+
+.footer .footer_t .box h1 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.footer .footer_t .box p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6a6a6a;
+  margin-bottom: 8px;
+}
+
+.footer .footer_t input {
+  padding: 8px 4px;
+  border-bottom: 1px solid #c7c7c7;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.footer .footer_t input::placeholder {
+  color: #c7c7c7;
+  font-size: 0.75rem;
+
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.footer .footer_t input:focus::placeholder {
+  opacity: 0;
+}
+
+.footer .footer_t .footer_btn {
+  width: 100%;
+  height: 36px;
+  background-color: #f4f4f4;
+
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.footer .footer_t .footer_btn:hover {
+  background-color: #ededed;
+}
+
+.footer .footer_b .copyright {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* 상단이동버튼 */
+/* 너비 높이 90px / 밖에 부분만 돌아가는 상단이동버튼 만들어주기 오른쪽에서 20px 하단에서 40px 떨어져있도록 처리 */
+/* 가상요소로 너비 높이 70px 짜리 Lemaire_topbtn-i-black.svg이미지 넣어주기 위치는 상단과 좌측에서 10px씩 떨어져있도록 처리 */
+/* 밖에 있는 도형만 돌아가게 처리해보기 */
+.top_btn {
+  width: 90px;
+  height: 90px;
+}
