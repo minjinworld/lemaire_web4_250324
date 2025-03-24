@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- //////////////////////////////// -->
+    <!-- js -->
+    <script src="./js/script.js" defer></script>
+    <title>LEMAIRE</title>
+  </head>
+  <body class="bg">
+    <div class="wrap">
+      <header class="header_area">
+        <div class="container">
+          <!-- 햄버거버튼 -->
+          <a href="#none" id="hamburger"><span></span><span></span></a>
+
+          <!-- 메인메뉴 -->
+          <!-- ul.main_menu>li*4>a.menu -->
+          <ul class="main_menu">
+            <li data-tab="tab1"><a href="#none" class="menu">WOMEN</a></li>
+            <li data-tab="tab2"><a href="#none" class="menu">MEN</a></li>
+            <li data-tab="tab3">
+              <a href="#none" class="menu">COLLECTIONS</a>
+            </li>
+            <li data-tab="tab4"><a href="#none" class="menu">ABOUT</a></li>
+          </ul>
+
+          <!-- 로고 -->
+          <a href="#none" class="header_logo">
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="410.000000pt"
+              height="62.000000pt"
+              viewBox="0 0 410.000000 62.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
+              >
+                <path
+                  d="M0 310 l0 -310 180 0 180 0 0 35 0 35 -145 0 -145 0 0 275 0 275 -35
+    0 -35 0 0 -310z"
+                />
+                <path
+                  d="M580 310 l0 -310 175 0 175 0 0 35 0 35 -140 0 -141 0 3 116 3 117
+    103 -2 102 -2 0 35 0 36 -105 0 -105 0 0 90 0 90 135 0 135 0 0 35 0 35 -170
+    0 -170 0 0 -310z"
+                />
+                <path
+                  d="M1180 310 l0 -310 35 0 35 0 2 222 3 222 96 -154 c128 -209 118 -209
+    246 -3 l98 158 3 -223 2 -222 35 0 35 0 0 310 0 310 -23 0 c-20 0 -43 -32
+    -147 -201 -113 -185 -125 -200 -137 -183 -8 11 -64 101 -126 202 -92 150 -115
+    182 -134 182 l-23 0 0 -310z"
+                />
+                <path
+                  d="M2211 598 c-5 -13 -64 -151 -130 -307 -67 -156 -121 -285 -121 -287
+    0 -2 15 -4 34 -4 33 0 35 2 69 83 l36 82 144 3 144 3 35 -83 c34 -82 35 -83
+    72 -86 21 -2 36 0 33 5 -2 4 -62 144 -132 311 -117 273 -131 302 -152 302 -15
+    0 -27 -8 -32 -22z m92 -231 l55 -127 -114 0 c-63 0 -114 1 -114 3 0 2 18 46
+    41 98 22 52 47 109 55 128 8 19 16 32 18 30 3 -2 29 -61 59 -132z"
+                />
+                <path
+                  d="M2730 310 l0 -310 35 0 35 0 0 310 0 310 -35 0 -35 0 0 -310z"
+                />
+                <path
+                  d="M3080 310 l0 -310 35 0 35 0 0 153 0 152 42 -1 43 -1 103 -134 c57
+    -74 109 -142 116 -152 10 -14 24 -17 54 -15 l41 3 -109 145 c-60 80 -110 148
+    -110 152 0 3 13 9 29 13 39 8 89 60 103 106 23 78 -28 166 -108 188 -21 6 -92
+    11 -156 11 l-118 0 0 -310z m283 220 c33 -26 41 -62 23 -105 -19 -45 -46 -55
+    -152 -55 l-84 0 0 90 0 90 94 0 c78 0 97 -3 119 -20z"
+                />
+                <path
+                  d="M3750 310 l0 -310 175 0 175 0 0 35 0 35 -140 0 -140 0 0 120 0 120
+    105 0 105 0 0 30 0 30 -105 0 -105 0 0 90 0 90 135 0 135 0 0 35 0 35 -170 0
+    -170 0 0 -310z"
+                />
+              </g>
+            </svg>
+          </a>
+
+          <!-- 아이콘박스 -->
+          <div class="icon_box">
+            <a href="#none" class="icon">search</a>
+            <a href="#none" class="icon">icon</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="sub_menu_box">
+        <!-- ul#tab$.sub_menu*4 -->
+        <ul id="tab1" class="sub_menu women">
+          <!-- li.menu_*2 -->
+          <li class="menu_left">
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">highlights</a>
+              <a href="#none" class="sub_menu_body">NEW ARRIVALS</a>
+              <a href="#none" class="sub_menu_body"
+                >RUNWAY SPRING - SUMMER 2023</a
+              >
+              <a href="#none" class="sub_menu_body">SS22 : SANDALS</a>
+              <a href="#none" class="sub_menu_body">SS22 : THE MARBLED PRINT</a>
+              <a href="#none" class="sub_menu_body">DENIM FOR SUMMER</a>
+            </div>
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">READY-TO-WEAR</a>
+              <a href="#none" class="sub_menu_body">COATS AND JACKETS</a>
+              <a href="#none" class="sub_menu_body">DRESSES</a>
+              <a href="#none" class="sub_menu_body">TROUSERS</a>
+              <a href="#none" class="sub_menu_body">SKIRTS</a>
+              <a href="#none" class="sub_menu_body">TOPS</a>
+              <a href="#none" class="sub_menu_body">SHIRTS</a>
+              <a href="#none" class="sub_menu_body">KNITWEAR AND JERSEY</a>
+              <a href="#none" class="sub_menu_body">DENIM</a>
+            </div>
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">ACCESSORIES</a>
+              <a href="#none" class="sub_menu_body">BAGS</a>
+              <a href="#none" class="sub_menu_body">SMALL LEATHER GOODS</a>
+              <a href="#none" class="sub_menu_body">SHOES</a>
+              <a href="#none" class="sub_menu_body">JEWELLERY</a>
+              <a href="#none" class="sub_menu_body">OTHER ACCESSORIES</a>
+              <a href="#none" class="sub_menu_body">VIEW ALL</a>
+            </div>
+          </li>
+          <li class="menu_right">
+            <a href="#none" class="sub_menu_detail photo">
+              <img src="./image/menu_01.jpg" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <ul id="tab2" class="sub_menu men">
+          <li class="menu_left">
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">highlights</a>
+              <a href="#none" class="sub_menu_body">NEW ARRIVALS</a>
+              <a href="#none" class="sub_menu_body"
+                >RUNWAY SPRING - SUMMER 2023</a
+              >
+              <a href="#none" class="sub_menu_body">SS22 : SANDALS</a>
+              <a href="#none" class="sub_menu_body">SS22 : THE MARBLED PRINT</a>
+              <a href="#none" class="sub_menu_body">DENIM FOR SUMMER</a>
+            </div>
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">READY-TO-WEAR</a>
+              <a href="#none" class="sub_menu_body">COATS AND JACKETS</a>
+              <a href="#none" class="sub_menu_body">DRESSES</a>
+              <a href="#none" class="sub_menu_body">TROUSERS</a>
+              <a href="#none" class="sub_menu_body">SKIRTS</a>
+              <a href="#none" class="sub_menu_body">TOPS</a>
+              <a href="#none" class="sub_menu_body">SHIRTS</a>
+              <a href="#none" class="sub_menu_body">KNITWEAR AND JERSEY</a>
+              <a href="#none" class="sub_menu_body">DENIM</a>
+            </div>
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">ACCESSORIES</a>
+              <a href="#none" class="sub_menu_body">BAGS</a>
+              <a href="#none" class="sub_menu_body">SMALL LEATHER GOODS</a>
+              <a href="#none" class="sub_menu_body">SHOES</a>
+              <a href="#none" class="sub_menu_body">JEWELLERY</a>
+              <a href="#none" class="sub_menu_body">OTHER ACCESSORIES</a>
+              <a href="#none" class="sub_menu_body">VIEW ALL</a>
+            </div>
+          </li>
+          <li class="menu_right">
+            <a href="#none" class="sub_menu_detail photo">
+              <img src="./image/menu_02.jpg" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <ul id="tab3" class="sub_menu collections">
+          <li class="menu_left">
+            <!-- .sub_menu_detail*3>a.sub_menu_head -->
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">SPRING-SUMMER 2023</a>
+            </div>
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">FALL-WINTER 2022</a>
+            </div>
+            <div class="sub_menu_detail">
+              <a href="#none" class="sub_menu_head">SPRING-SUMMER 2022</a>
+            </div>
+          </li>
+          <li class="menu_right">
+            <a href="#none" class="sub_menu_detail photo">
+              <img src="./image/menu_03.jpg" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <ul id="tab4" class="sub_menu about">
+          <li class="sub_menu_detail">
+            <a href="#none" class="photo">
+              <img src="./image/menu_04-1.jpg" alt="" />
+            </a>
+
+            <p>LEMAIRE</p>
+          </li>
+          <li class="sub_menu_detail">
+            <a href="#none" class="photo">
+              <img src="./image/menu_04-2.jpg" alt="" />
+            </a>
+
+            <p>PORTRAIT</p>
+          </li>
+          <li class="sub_menu_detail">
+            <a href="#none" class="photo">
+              <img src="./image/menu_04-3.jpg" alt="" />
+            </a>
+
+            <p>STORES</p>
+          </li>
+        </ul>
+      </div>
+
+      <section class="banner">
+        <div class="container">
+          <div class="video_banner">
+            <!-- .video_box.box$*3 -->
+            <div class="video_box box1">
+              <video
+                src="./video/video01.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="video_box box2">
+              <video
+                src="./video/video02.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="video_box box3">
+              <video
+                src="./video/video03.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section sec_1">
+        <div class="container">
+          <div class="ex_top">
+            <h1 class="headtext">LEMAIRE IN VIETNAM - AN EXHIBITION</h1>
+
+            <p class="subtext top">
+              LEMAIRE presents « a sense of place, a sense of time, a sense of
+              tune », a photo and video series that captures the 2023 and 2024
+              Spring-Summer collections in Vietnam.
+            </p>
+
+            <div class="subtext center">26.02.2024 – 17.03.2024</div>
+
+            <div class="subtext bottom">
+              In LEMAIRE flagship store, 1 rue Elzévir, Paris 3rd
+            </div>
+          </div>
+
+          <div class="ex_image">
+            <img src="./image/exhibition_1.jpeg" alt="" />
+          </div>
+
+          <div class="ex_center">
+            <p class="subtext left">
+              Osma Harvilahti’s lens opens a sightline between Ho Chi Minh City
+              and Hanoi, where the photographer, attuned to the passing
+              streetscapes that we live in and which live within us, observed
+              how people and their clothing form an intimate geography of the
+              city.
+            </p>
+            <p class="subtext right">
+              Osma Harvilahti’s lens opens a sightline between Ho Chi Minh City
+              and Hanoi, where the photographer, attuned to the passing
+              streetscapes that we live in and which live within us, observed
+              how people and their clothing form an intimate geography of the
+              city.
+            </p>
+          </div>
+
+          <div class="ex_bottom">
+            <p class="subtext">
+              The LEMAIRE wardrobe takes shape in a polyptych arrangement of
+              photos and videos echoing the flow of city dwellers and their mode
+              of transport. The garments have a protective quality, at times
+              puffed up or pressed against the body as the silhouettes are
+              transformed by their path. Movement emerges as a means of
+              experiencing otherness, changing one’s appearance, or dressing to
+              blend into the metropolises’ bustling vibrancy.
+            </p>
+
+            <div class="bottom_image">
+              <img src="./image/exhibition_2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section sec_2">
+        <div class="container">
+          <div class="collection_top">
+            <h1 class="headtext underline">FALL - WINTER 2024 COLLECTION</h1>
+
+            <div class="col_text">
+              <p class="subtext left">
+                The Fall-Winter 2024 collection was presented for the first time
+                at LEMAIRE headquarters in the heart of Le Marais, home to a
+                studio, offices and the atelier. Once they have passed through
+                the arches at 11 place des Vosges, the models followed the path
+                formed by a circular podium that embraces the characteristics of
+                the space, echoing the fluid lines of the silhouettes.
+                <br /><br />
+                LEMAIRE proposed a show that reveals to the public its living,
+                creative space where the collection was designed and crafted,
+                dovetailing with the brand’s vision of clothing as an allegory
+                for the perfectly proportioned home, a protective shelter. If
+                home is a refuge, the collection is an extension of it.
+              </p>
+
+              <p class="subtext right">
+                The LEMAIRE vestiaire emphasizes the intimate connection that
+                each wearer has with their clothing and the idea of what it
+                feels like to wear it. Certain pieces inspired by dance attire
+                are made from light, sensual materials: silk-knit second skins,
+                airy dresses in viscose crepe, and habotai pajamas are paired
+                with denims in clay hues.
+                <br /><br />
+                The tailoring is more relaxed, with cashmere flannels and mossy
+                wools. Technical details enrich the archetypes of the LEMAIRE
+                vestiaire: coated cotton, waterproof blocktech, satin nylon and
+                down jackets offer protection from the elements. The interplay
+                between layers is accentuated by new hybrids of domestic
+                comfort: in-and-out pajamas, a shirtjacket, loose yak and alpaca
+                knits and a bathrobe-coat, all bearing LEMAIRE’s signature
+                aesthetic.
+              </p>
+            </div>
+          </div>
+          <div class="collection_bottom">
+            <!-- .content.con$*9 -->
+            <div class="content con1"></div>
+            <div class="content con2"></div>
+            <div class="content con3"></div>
+            <div class="content con4"></div>
+            <div class="content con5"></div>
+            <div class="content con6"></div>
+            <div class="content con7"></div>
+            <div class="content con8"></div>
+            <div class="content con9"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section sec_3">
+        <div class="container">
+          <div class="ceo_top">
+            <div class="swiper ceoSwiper">
+              <!-- .swiper-wrapper.slider_wrap>.swiper-slide.slide_inner*4>img -->
+              <div class="swiper-wrapper slider_wrap">
+                <div class="swiper-slide slide_inner">
+                  <img src="./image/ceo_01.webp" alt="" />
+                </div>
+                <div class="swiper-slide slide_inner">
+                  <img src="./image/ceo_02.jpeg" alt="" />
+                </div>
+                <div class="swiper-slide slide_inner">
+                  <img src="./image/ceo_03.jpeg" alt="" />
+                </div>
+                <div class="swiper-slide slide_inner">
+                  <img src="./image/ceo_04.jpeg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ceo_bottom">
+            <div class="text_box left">
+              <h1 class="headtext underline">CHRISTOPHE LEMAIRE</h1>
+              <p class="subtext">
+                A literature and applied arts graduate who spent seven years as
+                an assistant at various fashion design studios, Christophe
+                Lemaire founded his namesake brand in 1991 following four years
+                working alongside Christian Lacroix. In 2000, he was appointed
+                artistic director of Lacoste and restored the brand’s iconic
+                image in the space of just a decade. In June 2010, he assumed
+                artistic direction of Hermès women’s prêt-à-porter, a position
+                he held for four years. He now focuses his efforts on his own
+                brand, which was renamed LEMAIRE in 2014. Christophe Lemaire
+                also serves as artistic director of the Uniqlo R&D center in
+                Paris and designs the Uniqlo U line.
+              </p>
+            </div>
+
+            <div class="text_box right">
+              <h1 class="headtext underline">SARAH-LINH TRAN</h1>
+              <p class="subtext">
+                A literary publisher by training, Sarah-Linh Tran charted a path
+                to the world of fashion, where she can give free rein to her
+                sensitivity, fondness of words and narrative approaches. She
+                imbued the women’s collection with a new silhouette while
+                telling the vibrant story of the brand’s creative processes and
+                their sources of inspiration. Sarah-Linh Tran also serves as a
+                co-creative director on womenswear at the Uniqlo Design Center
+                in Paris.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_section sec_4">
+        <div class="container">
+          <h1 class="headtext underline">STORE</h1>
+
+          <div class="shop_content">
+            <div class="content">
+              <img src="./image/storeTab_paris_01.webp" alt="" />
+              <a href="#none" class="shop_detail">
+                <div class="shop_inner">
+                  <p class="headtext underline">paris</p>
+                  <p class="address">40, Boulevard Haussmann, 75009 Paris</p>
+                </div>
+              </a>
+            </div>
+            <div class="content">
+              <img src="./image/storeTab_seoul_1.jpg" alt="" />
+              <a href="#none" class="shop_detail">
+                <div class="shop_inner">
+                  <p class="headtext underline">seoul</p>
+                  <p class="address">8-3 Daesagwan-ro 11-gil, Yongsan-gu</p>
+                </div>
+              </a>
+            </div>
+            <div class="content">
+              <img src="./image/storeTab_tokyo_1.jpg" alt="" />
+              <a href="#none" class="shop_detail">
+                <div class="shop_inner">
+                  <p class="headtext underline">tokyo</p>
+                  <p class="address">
+                    Ginza Komatsu West 6-9-5, Ginza Chuo-ku, Tokyo 104-0061,
+                    JAPAN
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_t">
+            <div class="box">
+              <h1>ABOUT</h1>
+              <p><a href="#none">LEMAIRE</a></p>
+              <p><a href="#none">Boutiques</a></p>
+              <p><a href="#none">Contact</a></p>
+              <p><a href="#none">Carrières</a></p>
+            </div>
+            <div class="box">
+              <h1>AIDE</h1>
+              <p><a href="#none">Livraison et Retours</a></p>
+              <p><a href="#none">Service client</a></p>
+              <p><a href="#none">FAQ</a></p>
+              <p><a href="#none">Demande de retour</a></p>
+            </div>
+            <div class="box">
+              <h1>RÉSEAUX SOCIAUX</h1>
+              <p><a href="#none">Instagram</a></p>
+              <p><a href="#none">Facebook</a></p>
+              <p><a href="#none">Pinterest</a></p>
+            </div>
+            <div class="box">
+              <h1>LÉGAL</h1>
+              <p><a href="#none">Terms & Conditions</a></p>
+              <p><a href="#none">Privacy Policy</a></p>
+              <p><a href="#none">Legal mentions</a></p>
+            </div>
+            <div class="box">
+              <h1>NEWSLETTER</h1>
+              <input type="search" placeholder="E - MAIL" />
+              <a href="#none" class="footer_btn">subscribe</a>
+            </div>
+          </div>
+
+          <div class="footer_b">
+            <small class="copyright">© Lemaire</small>
+          </div>
+        </div>
+      </footer>
+
+      <!-- 상단이동버튼 : 디자인시안에 없음 -->
+      <div class="top_btn">
+        <img src="./image/Lemaire_topbtn-o-black.svg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
