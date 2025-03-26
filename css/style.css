@@ -610,4 +610,387 @@ body.bg {
 .top_btn {
   width: 90px;
   height: 90px;
+
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.top_btn.on {
+  opacity: 1;
+  z-index: 9999;
+}
+
+.top_btn::after {
+  content: "";
+  background: url(../image/Lemaire_topbtn-i-black.svg) no-repeat center / cover;
+  width: 70px;
+  height: 70px;
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.top_btn img {
+  animation: top_btn 30s linear infinite;
+}
+
+@keyframes top_btn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ----------------------------- */
+/* 반응형 미디어쿼리 */
+@media (max-width: 1600px) {
+  .header_area .container,
+  .banner .container,
+  .footer .container {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* .sub_menu 는 고정영역이고 모바일메뉴로 변경되는 부분이기때문에 고정값으로 설정해두고 나중에 뺄거임 */
+  .sub_menu_box .sub_menu {
+    width: 1200px;
+  }
+}
+
+/* ----------------------- */
+@media (max-width: 1420px) {
+  .video_banner {
+    height: 650px;
+  }
+
+  .main_section .container {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* ------------------------ */
+  .sec_1 .ex_image {
+    margin-bottom: 40px;
+  }
+
+  .sec_1 .ex_center {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .sec_1 .ex_center .subtext {
+    width: 100%;
+  }
+  /* ------------------------ */
+  .footer .footer_t {
+    flex-wrap: wrap;
+  }
+
+  .footer .footer_t .box {
+    width: 50%;
+  }
+
+  .footer .footer_t .box:nth-child(1),
+  .footer .footer_t .box:nth-child(2),
+  .footer .footer_t .box:nth-child(4) {
+    display: none;
+  }
+}
+
+/* ------------------------ */
+@media (max-width: 1220px) {
+  .sub_menu_box,
+  .header_area .icon_box {
+    display: none;
+  }
+
+  .header_area .main_menu {
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 폰트 사이즈를 vw 로 바꾸는 방법 -> 폰트를 웹사이트 구축할때 생각없이 vw단위로 전부 바꾸면 화면너비에 따라 텍스트가 비정상적으로 작아지는 경우가 있을 수 있음(지금 메인메뉴는 화면 전체를 기준으로 고정되어있고 텍스트 영역밖에 없기때문에 vw 단위로 변환하는 것이 편함 */
+
+    /* 화면너비 / 100 = 값 */
+    /* 원하는 화면너비에서 지정하고싶은 폰트사이즈 / 값 = 최종값vw */
+
+    /* 기준이 1420px */
+    /* 85px을 vw 단위로 변경한다면? */
+    font-size: 5.985vw;
+
+    transform: translateY(-100%);
+    transition: 0.3s;
+  }
+
+  #hamburger {
+    display: block;
+    width: 20px;
+    height: 10px;
+    position: relative;
+
+    z-index: 99999;
+  }
+
+  #hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #222;
+
+    transition: 0.3s;
+  }
+
+  #hamburger span:first-child {
+    top: 0;
+    left: 0;
+  }
+
+  #hamburger span:last-child {
+    top: 100%;
+    left: 0;
+  }
+
+  /* --------------------- */
+  /* 햄버거버튼,메인메뉴 active */
+  .header_area .main_menu.active {
+    transform: translateY(0);
+  }
+
+  #hamburger.active span:first-child {
+    transform: translateY(10px);
+  }
+
+  #hamburger.active span:last-child {
+    transform: translateY(-10px);
+  }
+}
+
+/* --------------------- */
+@media (max-width: 960px) {
+  /* .sec_1 .ex_bottom 세로 정렬로 바꿔주고 이미지 밑에 텍스트 배치해보기 둘 사이 여백 32px */
+  .sec_1 .ex_bottom {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .sec_1 .ex_bottom .bottom_image {
+    width: 100%;
+  }
+
+  /* ---------------------- */
+  .sec_2 .collection_bottom .content {
+    width: calc((100% - 20px) / 2);
+  }
+
+  /* ---------------------- */
+  .sec_3 .ceoSwiper {
+    width: 100%;
+  }
+}
+
+/* ---------------------- */
+@media (max-width: 760px) {
+  /* 여기서부터는 모바일 그리드로 바꿔준다 라고 생각하면됨 */
+  .header_area .container,
+  .banner .container,
+  .main_section .container,
+  .footer .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* ---------------------- */
+  .video_banner {
+    height: auto;
+    padding: 150px 0px;
+  }
+
+  .video_banner .video_box.box2,
+  .video_banner .video_box.box3 {
+    display: none;
+  }
+
+  .video_banner .video_box {
+    width: 100%;
+  }
+
+  /* ---------------------- */
+  .header_area {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header_area .header_logo {
+    width: 110px;
+    height: 18px;
+  }
+
+  #hamburger {
+    width: 16px;
+    height: 8px;
+  }
+
+  #hamburger.active .span:first-child {
+    transform: translateY(8px);
+  }
+
+  #hamburger.active .span:last-child {
+    transform: translateY(-8px);
+  }
+
+  /* ---------------------- */
+  .sec_2 .col_text {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .sec_2 .subtext {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .sec_2 .collection_bottom {
+    gap: 8px;
+  }
+
+  .sec_2 .collection_bottom .content {
+    width: calc((100% - 8px) / 2);
+    height: 400px;
+  }
+
+  /* ---------------------- */
+  .sec_3 .ceoSwiper {
+    height: 360px;
+  }
+
+  .sec_3 .ceo_bottom {
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 32px;
+  }
+
+  .sec_3 .text_box {
+    width: 100%;
+  }
+
+  /* ---------------------- */
+  .sec_4 .container {
+    padding-bottom: 20px;
+  }
+
+  .sec_4 .shop_content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* .content 호버 막아주고 레이아웃 바꿔주기 */
+  .sec_4 .content {
+    width: 100%;
+    pointer-events: none;
+    /* 호버막아주는 속성은 걸려있는 객체 본인에게 설정 -> 호버걸린부분에 적용하지 않음 */
+    height: auto;
+  }
+
+  .sec_4 .content img {
+    height: 560px;
+  }
+
+  .sec_4 .shop_detail {
+    position: static;
+    /* position 풀어주는 속성 */
+    height: auto;
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  .sec_4 .shop_inner {
+    color: #222;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sec_4 .shop_inner .headtext {
+    border-bottom: none;
+  }
+
+  /* 주소 너비값 지정해서 텍스트 점처리 */
+  .sec_4 .shop_inner .address {
+    width: auto;
+    max-width: 60%;
+    font-size: 0.9rem;
+    font-style: normal;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* --------------------------- */
+  .footer .footer_t {
+    display: none;
+  }
+
+  .footer .container {
+    padding-top: 16px;
+  }
+
+  /* --------------------------- */
+
+  .top_btn {
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .top_btn::after {
+    top: 5px;
+    left: 5px;
+  }
+}
+
+/* --------------------------- */
+@media (max-width: 500px) {
+  .banner .container {
+    padding: 0;
+  }
+
+  .sec_1 .container {
+    padding-top: 86px;
+  }
+
+  .sec_1 .ex_image,
+  .sec_1 .ex_bottom .bottom_image {
+    height: 400px;
+  }
+
+  .sec_2 .collection_bottom .content {
+    width: 100%;
+    height: 500px;
+  }
 }
