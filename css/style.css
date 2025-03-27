@@ -854,11 +854,11 @@ body.bg {
     height: 8px;
   }
 
-  #hamburger.active .span:first-child {
+  #hamburger.active span:first-child {
     transform: translateY(8px);
   }
 
-  #hamburger.active .span:last-child {
+  #hamburger.active span:last-child {
     transform: translateY(-8px);
   }
 

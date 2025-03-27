@@ -42,21 +42,45 @@ document.addEventListener(`DOMContentLoaded`, function () {
     }
   });
 
-  // swiper(sec_3)
-  // 세로로 굴러가는 스와이퍼
+  // 스와이퍼 변수 선언
+  let swiper = undefined;
 
-  var swiper = new Swiper(".ceoSwiper", {
-    direction: "vertical",
-    loop: true,
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false, // 다른 인터렉션이 있을때 자동재생을 멈추는것을 방지
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+  // 윈도우 너비에 따라 조정되는 미디어쿼리 및 리사이즈 이벤트 진행
+  function initSwiper() {
+    // 윈도우의 너비값을 변수에 저장
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth >= 960 && swiper == undefined) {
+      // swiper(sec_3)
+      // 세로로 굴러가는 스와이퍼
+
+      swiper = new Swiper(".ceoSwiper", {
+        direction: "vertical",
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false, // 다른 인터렉션이 있을때 자동재생을 멈추는것을 방지
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    } else if (windowWidth < 960 && swiper != undefined) {
+      swiper.destroy();
+      swiper = undefined;
+    }
+  }
+
+  // 함수는 무조건 호출해야 사용가능
+  initSwiper();
+
+  // 윈도우가 리사이즈될때 자동으로 반응하도록 설정
+  window.addEventListener(`resize`, function () {
+    initSwiper(); // 지역호출
   });
+
+  // window.addEventListener(`resize`, () => initSwiper());
 
   // sub_menu(tab)
   //마우스 올리면 카테고리에 맞는 탭 활성화
@@ -128,5 +152,26 @@ document.addEventListener(`DOMContentLoaded`, function () {
   // window.scrollTo 는 브라우저에서 제공하는 자바스크립트 내장 메서드 : 페이지를 특정 위치로 스크롤할때 사용
   // behavior: `smooth` 는 부드럽게 스크롤되도록 하는 옵션(기본값은 auto) -> 직접 시간조절을 할 수 없다
 
-  // 작은 그리드에서 햄버거버튼 누르면 메인메뉴 출력
+  // 과제 : 작은 그리드에서 햄버거버튼 누르면 메인메뉴 출력
+  const menuBtn = document.querySelector(`#hamburger`);
+  const mainMenu = document.querySelector(`.main_menu`);
+
+  menuBtn.addEventListener(`click`, function () {
+    this.classList.toggle(`active`);
+
+    // mainMenu.classList.toggle(`active`);
+    // 상위 형식으로 코드 작성시 브라우저 오류 발생하면 반대로 토글될 가능성 있음
+
+    //contains 활용해서 메인메뉴를 메뉴버튼 active 가 있을때 추가 아니면 제거
+    const hasClass = this.classList.contains(`active`);
+    if (hasClass) {
+      mainMenu.classList.add(`active`);
+    } else {
+      mainMenu.classList.remove(`active`);
+    }
+  });
+
+  // 파비콘 연결해오기(파비콘이미지는 이미지폴더에 있습니다!)
+  // 서버에 추가수정한 부분 집에서 업로드 해보기!
+  // 내일부터는 대면 수업입니다!!!(리뉴얼 할 사이트 지정해오시고 디자인 시안 미리 어떻게 구성할지 생각해오시면 좋습니다~)
 });
